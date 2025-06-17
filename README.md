@@ -1,23 +1,81 @@
 # NLP-based-Resume-Classifier
 
-Document Parsing
-PlumPDF, PyPDF2, python-docx used to extract raw text.
-Preprocessing
-regex, NLTK: tokenization, stopword removal, text normalization.
-Feature Engineering
-TF-IDF, Word2Vec, and optional LLM embeddings (e.g. OpenAI/BERT).
-Metadata features from CSV encoded via LabelEncoder.
-Modeling
-Trained Logistic Regression, Random Forest, and XGBoost using scikit-learn and xgboost.
-Scoring & Evaluation
-Accuracy, F1, ROC-AUC metrics.
-Resume scoring based on skill/keyword match
+An end-to-end machine learning pipeline to classify resumes from unstructured `.pdf` / `.docx` files and structured `.csv` metadata. This project was developed as part of the **Piramal Finance Hackathon 2024**, combining advanced NLP techniques and classical machine learning models.
 
+---
 
-🧾 Technologies Used
-Component	Stack
-Parsing	PlumPDF, PyPDF2, python-docx
-NLP Preprocessing	NLTK, regex, pandas, NumPy
-Feature Extraction	TF-IDF, Word2Vec, LLM embeddings (optional)
-Modeling	scikit-learn, XGBoost
-Evaluation	sklearn.metrics, seaborn, matplotlib
+## 🚀 Pipeline Overview
+
+### 📄 Document Parsing
+- Used `PlumPDF`, `PyPDF2`, and `python-docx` to extract raw text from PDF and DOCX resumes.
+
+### 🧹 Preprocessing
+- Utilized `regex` and `NLTK` for:
+  - Tokenization  
+  - Stopword removal  
+  - Text normalization
+
+### 🧠 Feature Engineering
+- Text features:
+  - `TF-IDF`  
+  - `Word2Vec`  
+  - Optional: LLM-based embeddings (e.g. OpenAI/BERT)
+- Metadata features:
+  - Encoded using `LabelEncoder` from structured `.csv` data
+
+### 📊 Modeling
+- Trained models:
+  - Logistic Regression  
+  - Random Forest  
+  - XGBoost  
+- Libraries: `scikit-learn`, `xgboost`
+
+### 📈 Scoring & Evaluation
+- Metrics:
+  - Accuracy  
+  - F1 Score  
+  - ROC-AUC  
+- Resume Scoring:
+  - Based on skill and keyword match with job requirements
+
+---
+
+## 🧾 Technologies Used
+
+| Component            | Stack                                      |
+|----------------------|--------------------------------------------|
+| Parsing              | PlumPDF, PyPDF2, python-docx               |
+| NLP Preprocessing    | NLTK, regex, pandas, NumPy                 |
+| Feature Extraction   | TF-IDF, Word2Vec, LLM embeddings (optional)|
+| Modeling             | scikit-learn, XGBoost                      |
+| Evaluation           | sklearn.metrics, seaborn, matplotlib       |
+
+---
+
+## 📁 Project Structure (Optional)
+```
+├── data/
+│   ├── resumes/             # PDF/DOCX resume files
+│   └── metadata.csv         # Associated metadata
+├── src/
+│   ├── parsing.py           # Resume parsing utilities
+│   ├── preprocessing.py     # NLP preprocessing steps
+│   ├── feature_engineering.py
+│   ├── model_training.py
+│   └── evaluation.py
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## 📌 Future Improvements
+- Integrate full support for LLM-based embeddings (BERT, OpenAI, etc.)
+- Deploy the pipeline as a web-based resume screening tool
+- Include feedback-based model fine-tuning loop
+
+---
+
+## 📣 Acknowledgments
+This project was built for the **Piramal Finance Hackathon 2024**.  
+We thank the organizers and mentors for their guidance and support.
