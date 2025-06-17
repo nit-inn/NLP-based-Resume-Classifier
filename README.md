@@ -52,23 +52,6 @@ An end-to-end machine learning pipeline to classify resumes from unstructured `.
 
 ---
 
-## 📁 Project Structure (Optional)
-```
-├── data/
-│   ├── resumes/             # PDF/DOCX resume files
-│   └── metadata.csv         # Associated metadata
-├── src/
-│   ├── parsing.py           # Resume parsing utilities
-│   ├── preprocessing.py     # NLP preprocessing steps
-│   ├── feature_engineering.py
-│   ├── model_training.py
-│   └── evaluation.py
-├── README.md
-└── requirements.txt
-```
-
----
-
 ## 📌 Future Improvements
 - Integrate full support for LLM-based embeddings (BERT, OpenAI, etc.)
 - Deploy the pipeline as a web-based resume screening tool
